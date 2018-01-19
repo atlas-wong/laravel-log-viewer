@@ -17,7 +17,7 @@ Small log viewer for laravel. Looks like this:
 
 Difference with original package
 ---------------------------------
-This fork allow customize max file size of a log file that should show in web view, over sized log file will automatically provide a download option instead trying to load and lag your client.
+This fork allow customizing max file size of a log file that should show in web view, over-sized log files will automatically provide a download option instead of trying to load and lag your client.
 
 Install (Laravel)
 -----------------
