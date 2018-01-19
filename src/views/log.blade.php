@@ -65,7 +65,7 @@
     <div class="col-sm-9 col-md-10 table-container">
       @if ($logs === null)
         <div>
-          Log file oversized, please download it.
+            Log file {{empty($config['max_file_size'])?"oversized":("over " . ($config['max_file_size']/1048576) . "MB")}}, please download it.
         </div>
       @else
         <table id="table-log" class="table table-striped">
