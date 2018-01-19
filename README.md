@@ -1,9 +1,7 @@
 Laravel 5 log viewer
 ======================
 
-[![Packagist](https://img.shields.io/packagist/v/AtlasWong/laravel-log-viewer.svg)]()
-[![Packagist](https://img.shields.io/packagist/l/AtlasWong/laravel-log-viewer.svg)](https://packagist.org/packages/AtlasWong/laravel-log-viewer) [![Packagist](https://img.shields.io/packagist/dm/AtlasWong/laravel-log-viewer.svg)]() [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/AtlasWong/laravel-log-viewer/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/AtlasWong/laravel-log-viewer/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/AtlasWong/laravel-log-viewer/badges/build.png?b=master)](https://scrutinizer-ci.com/g/AtlasWong/laravel-log-viewer/build-status/master)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/2974f007-ff84-41a7-8954-7cda41ca5f84/mini.png)](https://insight.sensiolabs.com/projects/2974f007-ff84-41a7-8954-7cda41ca5f84)
+[![Packagist](https://img.shields.io/packagist/v/atlas-wong/laravel-log-viewer.svg)]()
 
 TL;DR
 -----
