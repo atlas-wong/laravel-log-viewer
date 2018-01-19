@@ -1,8 +1,8 @@
 Laravel 5 log viewer
 ======================
 
-[![Packagist](https://img.shields.io/packagist/v/rap2hpoutre/laravel-log-viewer.svg)]()
-[![Packagist](https://img.shields.io/packagist/l/rap2hpoutre/laravel-log-viewer.svg)](https://packagist.org/packages/rap2hpoutre/laravel-log-viewer) [![Packagist](https://img.shields.io/packagist/dm/rap2hpoutre/laravel-log-viewer.svg)]() [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rap2hpoutre/laravel-log-viewer/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rap2hpoutre/laravel-log-viewer/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/rap2hpoutre/laravel-log-viewer/badges/build.png?b=master)](https://scrutinizer-ci.com/g/rap2hpoutre/laravel-log-viewer/build-status/master)
+[![Packagist](https://img.shields.io/packagist/v/AtlasWong/laravel-log-viewer.svg)]()
+[![Packagist](https://img.shields.io/packagist/l/AtlasWong/laravel-log-viewer.svg)](https://packagist.org/packages/AtlasWong/laravel-log-viewer) [![Packagist](https://img.shields.io/packagist/dm/AtlasWong/laravel-log-viewer.svg)]() [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/AtlasWong/laravel-log-viewer/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/AtlasWong/laravel-log-viewer/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/AtlasWong/laravel-log-viewer/badges/build.png?b=master)](https://scrutinizer-ci.com/g/AtlasWong/laravel-log-viewer/build-status/master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/2974f007-ff84-41a7-8954-7cda41ca5f84/mini.png)](https://insight.sensiolabs.com/projects/2974f007-ff84-41a7-8954-7cda41ca5f84)
 
 TL;DR
@@ -17,33 +17,39 @@ Small log viewer for laravel. Looks like this:
 
 Difference with original package
 ---------------------------------
-This fork allow customizing max file size of a log file that should show in web view, over-sized log files will automatically provide a download option instead of trying to load and lag your client.
+This fork allow customizing below setting:
+- max_file_size
+- search_delay
 
 Install (Laravel)
 -----------------
 Install via composer
 ```
-composer require rap2hpoutre/laravel-log-viewer
+composer require atlas-wong/laravel-log-viewer
 ```
 
 Add Service Provider to `config/app.php` in `providers` section
 ```php
-Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+AtlasWong\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 ```
 
 Add a route in your web routes file:
 ```php 
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+Route::get('logs', '\AtlasWong\LaravelLogViewer\LogViewerController@index');
 ```
 
 Go to `http://myapp/logs` or some other route
 
+**Optionally** publish `laravel-log-viewer.php` into `/config` for config customization:
+
+```
+php artisan vendor:publish --provider="AtlasWong\LaravelLogViewer\LaravelLogViewerServiceProvider" --tag=config
+``` 
+
 **Optionally** publish `log.blade.php` into `/resources/views/vendor/laravel-log-viewer/` for view customization:
 
 ```
-php artisan vendor:publish \
-  --provider="Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider" \
-  --tag=views
+php artisan vendor:publish --provider="AtlasWong\LaravelLogViewer\LaravelLogViewerServiceProvider" --tag=views
 ``` 
 
 Install (Lumen)
@@ -51,17 +57,17 @@ Install (Lumen)
 
 Install via composer
 ```
-composer require rap2hpoutre/laravel-log-viewer
+composer require AtlasWong/laravel-log-viewer
 ```
 
 Add the following in `bootstrap/app.php`:
 ```php
-$app->register(\Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class);
+$app->register(\AtlasWong\LaravelLogViewer\LaravelLogViewerServiceProvider::class);
 ```
 
 Explicitly set the namespace in `app/Http/routes.php`:
 ```php
-$app->group(['namespace' => '\Rap2hpoutre\LaravelLogViewer'], function() use ($app) {
+$app->group(['namespace' => '\AtlasWong\LaravelLogViewer'], function() use ($app) {
     $app->get('logs', 'LogViewerController@index');
 });
 ```
