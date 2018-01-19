@@ -65,7 +65,7 @@
     <div class="col-sm-9 col-md-10 table-container">
       @if ($logs === null)
         <div>
-          Log file >50M, please download it.
+          Log file oversized, please download it.
         </div>
       @else
         <table id="table-log" class="table table-striped">
@@ -137,7 +137,8 @@
         var data = JSON.parse(window.localStorage.getItem("datatable"));
         if (data) data.start = 0;
         return data;
-      }
+      },
+      "searchDelay": "{{empty($config['seach_delay'])?500:$config['seach_delay']}}"
     });
     $('#delete-log, #delete-all-log').click(function () {
       return confirm('Are you sure?');
