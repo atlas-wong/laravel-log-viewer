@@ -1,12 +1,12 @@
 {
-    "name": "rap2hpoutre/laravel-log-viewer",
+    "name": "atlas-wong/laravel-log-viewer",
     "description": "A Laravel log reader",
     "license": "MIT",
     "keywords": ["log", "log-reader", "log-viewer", "logging", "laravel", "lumen"],
     "authors": [
         {
-            "name": "rap2hpoutre",
-            "email": "raphaelht@gmail.com"
+            "name": "Atlas Wong",
+            "email": "atlas.wong.times@gmail.com"
         }
     ],
     "require": {
@@ -18,14 +18,7 @@
             "src/controllers"
         ],
         "psr-0": {
-            "Rap2hpoutre\\LaravelLogViewer\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider"
-            ]
+            "AtlasWong\\LaravelLogViewer\\": "src/"
         }
     },
     "minimum-stability": "stable"
