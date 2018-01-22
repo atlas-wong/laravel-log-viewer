@@ -22,6 +22,14 @@ This fork allow customizing below setting:
 - max_file_size
 - search_delay
 
+Todo with this fork
+--------------------
+This fork would target on more customizable feature:
+- db logging
+- ttl of log files
+- tbc
+
+
 Install (Laravel)
 -----------------
 Install via composer
