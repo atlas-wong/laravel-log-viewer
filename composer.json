@@ -21,5 +21,12 @@
             "AtlasWong\\LaravelLogViewer\\": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AtlasWong\\LaravelLogViewer\\LaravelLogViewerServiceProvider"
+            ]
+        }
+    }
 }
