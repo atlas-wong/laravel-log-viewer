@@ -25,6 +25,7 @@ This fork allow customizing below setting:
 Todo with this fork
 --------------------
 This fork would target on more customizable feature:
+- visit audit log (db log)
 - ttl of log files
 - tbc
 
