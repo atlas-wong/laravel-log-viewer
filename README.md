@@ -37,7 +37,7 @@ Install via composer
 composer require atlas-wong/laravel-log-viewer
 ```
 
-Add Service Provider to `config/app.php` in `providers` section
+Add Service Provider to `config/app.php` in `providers` section (Laravel 5.4 or lower)
 ```php
 AtlasWong\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 ```
